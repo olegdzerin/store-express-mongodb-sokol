@@ -1,0 +1,71 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Online clothing store</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#if isTShirts}}
+      <li class="active"><a href="/t-shirts">T-SHIRTS</a></li>
+      {{else}}
+      <li><a href="/t-shirts">T-SHIRTS</a></li>
+      {{/if}}
+
+      {{#if isSweatshirts}}
+      <li class="active"><a href="/sweatshirts">SWEATSHIRTS</a></li>
+      {{else}}
+      <li><a href="/sweatshirts">SWEATSHIRTS</a></li>
+      {{/if}}
+
+      {{#if isHoody}}
+      <li class="active"><a href="/hoody">HOODY</a></li>
+      {{else}}
+      <li><a href="/hoody">HOODY</a></li>
+      {{/if}}
+
+      {{#if isShirts}}
+      <li class="active"><a href="/shirts">SHIRTS</a></li>
+      {{else}}
+      <li><a href="/shirts">SHIRTS</a></li>
+      {{/if}}
+
+      {{#if isBackpacks}}
+      <li class="active"><a href="/backpacks">BACKPACKS</a></li>
+      {{else}}
+      <li><a href="/backpacks">BACKPACKS</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+          {{#if isAddProduct}}
+          <li class="active header-li-style"><a href="/add-product">Add product</a></li>
+          {{else}}
+          <li class="header-li-style"><a href="/add-product">Add product</a></li>
+          {{/if}}
+
+          {{#if isCard}}
+          <li class="active header-li-style"><a href="/card">Card</a></li>
+          {{else}}
+          <li class="header-li-style"><a href="/card">Card</a></li>
+          {{/if}}
+
+          {{#if isOrder}}
+          <li class="active header-li-style"><a href="/orders">Orders</a></li>
+          {{else}}
+          <li class="header-li-style"><a href="/orders">Orders</a></li>
+          {{/if}}
+
+          {{#if isProfile}}
+          <li class="active header-li-style"><a href="/profile">Profile</a></li>
+          {{else}}
+          <li class="header-li-style"><a href="/profile">Profile</a></li>
+          {{/if}}
+
+          <li><a href="/auth/logout">Log out</a></li>
+      {{else}}
+    
+          {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Login</a></li>
+          {{else}}
+          <li><a href="/auth/login#login">Login</a></li>
+          {{/if}}
+      {{/if}}
+    </ul>
+  </div>
+</nav>

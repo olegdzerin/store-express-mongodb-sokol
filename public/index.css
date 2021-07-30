@@ -1,0 +1,341 @@
+nav {
+  color: #fff;
+  background-color: black;
+}
+nav ul li.active {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+nav ul a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+nav ul a {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.sidenav {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 1px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0),
+    0 1px 1px 0 rgba(0, 0, 0, 0.33);
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.edit-product {
+  background: white;
+  padding: 0px 20px 20px 20px;
+  border-radius: 3px;
+}
+
+.edit-product-h1 {
+  padding-top: 20px;
+}
+
+html {
+  font-size: 15px;
+  background: #f3f3f3;
+}
+.nav-wrapper {
+  padding: 0 10px;
+}
+
+.availability {
+  margin-bottom: 30px;
+}
+
+input[type="number"]:not(.browser-default),
+input[type="text"]:not(.browser-default) {
+  border-bottom: 1px solid #9e9e9e;
+}
+input:not([type]):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="url"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="time"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="date"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly])
+  + label,
+input[type="tel"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="search"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #000000;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: 0 1px 0 0 #000000;
+  box-shadow: 0 1px 0 0 #000000;
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type="text"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default):focus,
+input.valid[type="password"]:not(.browser-default),
+input.valid[type="password"]:not(.browser-default):focus,
+input.valid[type="email"]:not(.browser-default),
+input.valid[type="email"]:not(.browser-default):focus,
+input.valid[type="url"]:not(.browser-default),
+input.valid[type="url"]:not(.browser-default):focus,
+input.valid[type="time"]:not(.browser-default),
+input.valid[type="time"]:not(.browser-default):focus,
+input.valid[type="date"]:not(.browser-default),
+input.valid[type="date"]:not(.browser-default):focus,
+input.valid[type="datetime"]:not(.browser-default),
+input.valid[type="datetime"]:not(.browser-default):focus,
+input.valid[type="datetime-local"]:not(.browser-default),
+input.valid[type="datetime-local"]:not(.browser-default):focus,
+input.valid[type="tel"]:not(.browser-default),
+input.valid[type="tel"]:not(.browser-default):focus,
+input.valid[type="number"]:not(.browser-default),
+input.valid[type="number"]:not(.browser-default):focus,
+input.valid[type="search"]:not(.browser-default),
+input.valid[type="search"]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid > input.select-dropdown {
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: 0 1px 0 0 #000000;
+  box-shadow: 0 1px 0 0 #000000;
+}
+
+.switch label input[type="checkbox"]:checked + .lever:after {
+  background-color: #000000;
+}
+.switch label .lever:before {
+  background-color: rgb(140, 140, 140);
+}
+.switch label .lever {
+  background-color: rgb(193, 193, 193);
+}
+.switch label input[type="checkbox"]:checked + .lever {
+  background-color: #a2a2a2;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+  background-color: #000000;
+}
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+  background-color: #424242;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+select {
+  width: 30%;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product h1 {
+  margin-bottom: 2rem;
+}
+
+.product img {
+  max-width: 600px;
+  height: auto;
+}
+
+.course .price.big {
+  font-size: 2.5rem;
+}
+
+.container.product {
+  background: #2d2d2d;
+}
+
+.header-li-style {
+  background: #693a3a;
+  line-height: 60px;
+  border-bottom: 2px solid #4e1f1e;
+  border-top: 2px solid #4e1f1e;
+}
+li.active.header-li-style {
+  background-color: rgb(95, 45, 44);
+}
+.header-li-style a:hover {
+  background-color: rgb(94, 46, 44);
+}
+
+.row.price-category-info {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.auth {
+  padding: 20px;
+}
+ul#tabs-swipe {
+  text-align: center;
+}
+.col.s12.offset-s3 {
+  background-color: #ffffff !important;
+  border-radius: 4px;
+  padding: 20px;
+}
+.auth.container {
+  width: 42%;
+}
+
+.tabs {
+  background-color: #efefef00;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: #020202;
+}
+
+.tabs .indicator {
+  background-color: #505050;
+}
+.tabs .tab a {
+  color: rgba(95, 95, 95, 0.7);
+}
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(130, 130, 130, 0.2);
+}
+.gray_link {
+  margin-left: 32px;
+  color: #969696;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.start-phrase-of-the-day {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  contain: strict;
+  display: -webkit-box;
+  display: flex;
+  /* -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center; */
+  align-items: center;
+  width: 100%;
+  height: 140px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.start-phrase-of-the-day-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.start-phrase-of-the-day-text {
+  font-size: 28px;
+  line-height: 43px;
+  word-spacing: 6px;
+  font-weight: 700;
+}
+
+.start-phrase-of-the-day-text-white {
+  padding: 9px 15px;
+  background: #000;
+  color: #fff;
+}
+
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.sidenav {
+  /* -webkit-mask-image: -webkit-radial-gradient(#fff, #000); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 300px;
+  height: auto;
+}
+.card .card-image img {
+  padding: 26px;
+  max-height: 320px;
+  width: auto;
+  max-width: 100%;
+}
+.card .card-image {
+  height: 320px;
+  vertical-align: middle;
+  display: table-cell;
+}
+.page-footer {
+  margin-top: 30px;
+  background-color: #000000;
+}
+
+.page-footer .footer-copyright {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.main_block {
+  min-height: 500px;
+}
