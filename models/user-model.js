@@ -1,4 +1,7 @@
-const { Schema, model } = require("mongoose");
+const {
+  Schema,
+  model
+} = require("mongoose");
 
 const userSchema = new Schema({
   email: {
@@ -14,21 +17,19 @@ const userSchema = new Schema({
   resetToken: String,
   resetTokenExp: Date,
   cart: {
-    items: [
-      {
-        count: {
-          type: Number,
-          required: true,
-          default: 1,
-        },
-        productId: {
-          // тут храним референцию к самому товару
-          type: Schema.Types.ObjectId,
-          ref: "Product",
-          required: true,
-        },
+    items: [{
+      count: {
+        type: Number,
+        required: true,
+        default: 1,
       },
-    ],
+      productId: {
+        // тут храним референцию к самому товару
+        type: Schema.Types.ObjectId,
+        ref: "Product",
+        required: true,
+      },
+    }, ],
   },
 });
 
@@ -47,7 +48,9 @@ userSchema.methods.addToCart = function (product) {
     });
   }
 
-  this.cart = { items };
+  this.cart = {
+    items
+  };
   return this.save();
 };
 
@@ -61,12 +64,16 @@ userSchema.methods.removeFromCart = function (id) {
     items[idx].count--;
   }
 
-  this.cart = { items };
+  this.cart = {
+    items
+  };
   return this.save();
 };
 
 userSchema.methods.clearCart = function () {
-  this.cart = { items: [] };
+  this.cart = {
+    items: []
+  };
   return this.save();
 };
 

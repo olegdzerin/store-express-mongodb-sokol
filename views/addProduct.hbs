@@ -55,7 +55,8 @@
             <span class="helper-text" data-error="Добавьте корректный url изображения"></span>
         </div>
 
-        <input type="hidden" name="_csrf" value="{{csrf}}">
+        {{!-- <input type="hidden" name="_csrf" value="{{csrf}}"> --}}
+        <input type="text" name="_csrf" value="{{csrf}}">
 
         <button id='submit' class="btn btn-large">Создать товар</button>
     </form>

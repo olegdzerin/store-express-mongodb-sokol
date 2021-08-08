@@ -11,15 +11,20 @@ function isOwner(product, req) {
 }
 
 router.get("/", async (req, res) => {
+  const result = await req.user.populate("cart.items.productId").execPopulate()
+  //console.log(result.cart.items[0].productId);
   try {
     const products = await Product.find()
       .populate("userId", "email name")
-      .select("price title img typeOfclothes");
-
+      .select("price title img typeOfclothes userId sku quantity availability");
+    console.log(req.user);
     res.render("home", {
       title: "Главная страница интерент-магазина одежды",
       userId: req.user ? req.user._id.toString() : null,
       products,
+      arr: [{a1:12,a1:13}, {a1:122,a1:133}, {a1:1222,a1:1333}],
+      arrr:['1','b2'],
+      str: 'string1'
     });
   } catch (error) {
     console.log(error);

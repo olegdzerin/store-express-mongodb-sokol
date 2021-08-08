@@ -1,6 +1,12 @@
 <div class="row home-black-products">
     <h1>Все товары магазина</h1>
 
+    {{#if true}}
+    <div>
+        {{str}}
+    </div>
+    {{/if}}
+   
     {{#if products.length}}
     {{#each products}}
     <div class="col s4">
@@ -19,6 +25,21 @@
                 <div class="row price-category-info">
                     <div class="col s12">
                         <p class="price">{{price}}</p>
+                    </div>
+                    <div class="col s12">
+                        <p>my name: {{userId.email}}</p>
+                    </div>
+                    <div class="col s12">
+                        <p>userId: {{userId}}</p>
+                    </div>
+                      <div class="col s12">
+                        <p>availability: {{availability}}</p>
+                    </div>
+                    <div class="col s12">
+                        <p>sku: {{sku}}</p>
+                    </div>
+                        <div class="col s12">
+                        <p>img: {{img}}</p>
                     </div>
                     <div class="col s10">
                         <form action="/card/add" method="POST">
