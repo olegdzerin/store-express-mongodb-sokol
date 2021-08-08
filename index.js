@@ -30,7 +30,8 @@ const keys = require("./keys")
 
 const varMiddleware = require("./middleware/variables");
 const userMiddleware = require("./middleware/user")
-const fileMiddleware = require("./middleware/file")
+const fileMiddleware = require("./middleware/file");
+const { nextTick } = require("process");
 
 const app = express();
 const hbs = exphbs.create({
@@ -59,6 +60,7 @@ app.use(
     store
   })
 );
+
 app.use(fileMiddleware.single('avatar')) // single - говорим, что файл один
 app.use(csrf());
 app.use(flash());
@@ -66,8 +68,8 @@ app.use(helmet());
 app.use(compression());
 app.use(varMiddleware);
 app.use(userMiddleware);
-
-app.use("/", homeRoutes);
+app.use(function(req,res,next){console.log('middleware'); return next()});
+app.use("/",function(req,res,next){console.log("keys::" + keys.MONGODB_URI); return next()} , homeRoutes);
 app.use("/t-shirts", tshirtsRoutes);
 app.use("/sweatshirts", sweatshirtsRoutes);
 app.use("/hoody", hoodyRoutes);
@@ -98,7 +100,10 @@ async function start() {
     console.log(err);
   }
 }
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 start();
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });

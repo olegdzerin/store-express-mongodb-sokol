@@ -24,6 +24,7 @@ router.get("/", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+ // res.json({a1: "a1"});
 });
 
 router.get("/:id/edit", auth, async (req, res) => {
